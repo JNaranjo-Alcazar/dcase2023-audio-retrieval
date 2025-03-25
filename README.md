@@ -54,12 +54,6 @@ preprocessing
 ├─ sbert_embeddings.py          # generate sentence embeddings using Sentence-BERT (all-mpnet-base-v2)
 └─ cnn14_transfer.py            # transfer pretrained CNN14 (Cnn14_mAP=0.431.pth)
 
-
-Actúa como un analista de código en Python y realiza un resumen breve (en diferentes puntos)  de su funcionalidad. Tu respuesta debe incluir:
-- Qué realiza el código de forma general.
-- Si el código almacena información (por ejemplo, resultados en ficheros, bases de datos, etc.) y como se llaman estos archivos.
-- Si accede a otros archivos para cumplir su función, y por qué lo hace, nombrando los archivos a los que accede.
-No entres en detalles técnicos ni en un análisis exhaustivo; proporciona solo un resumen conciso y claro de qué hace.
 ```
 *  ```audio_logmel.py```  
 
