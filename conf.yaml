@@ -1,6 +1,6 @@
-trial_series: YOUR_OUTPUT_DIR
+trial_series: ./
 
-trial_base: YOUR_OUTPUT_PATH
+trial_base: ./
 
 
 # Configure ray-tune clusters
@@ -11,7 +11,7 @@ ray_conf:
         local_mode: false
         ignore_reinit_error: true
         include_dashboard: false
-        _temp_dir: YOUR_OUTPUT_PATH/ray
+        _temp_dir: ./ray
 
     trial_stopper: TrialPlateauStopper
     stopper_args:
@@ -25,21 +25,21 @@ ray_conf:
 # Configure training, validation, and evaluation data
 data_conf:
     train_data: # training data
-        dataset: YOUR_DATA_PATH/Clotho
+        dataset: /app/Clotho
         audio_data: development_audio_logmels.hdf5
         text_data: development_text.csv
         text_embeds: sbert_embeds.pkl
         text_level: sentence
 
     val_data: # validation data
-        dataset: YOUR_DATA_PATH/Clotho
+        dataset: /app/Clotho
         audio_data: validation_audio_logmels.hdf5
         text_data: validation_text.csv
         text_embeds: sbert_embeds.pkl
         text_level: sentence
 
     eval_data: # evaluation data
-        dataset: YOUR_DATA_PATH/Clotho
+        dataset: /app/Clotho
         audio_data: evaluation_audio_logmels.hdf5
         text_data: evaluation_text.csv
         text_embeds: sbert_embeds.pkl
@@ -64,7 +64,7 @@ DualEncoderModel:
     audio_enc:
         name: CNN14Encoder
         init: prior
-        weight: YOUR_DATA_PATH/pretrained_models/CNN14_300.pth
+        weight: /app/pretrained_models/CNN14_300.pth
         trainable: true
         out_dim: 300
 
